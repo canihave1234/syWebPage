@@ -37,7 +37,7 @@ export default function Home() {
         <div className="bg-gray-300 row-span-2  flex items-center justify-center">
           <div className="relative w-[75%] h-[75%]">
             <Image
-              src="/sy.gif"
+              src="/sy3.gif"
               alt="Hero"
               fill
               priority
