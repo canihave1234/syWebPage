@@ -3,7 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-syne: "Syne", sans-serif;
 }
+
 
 @theme inline {
   --color-background: var(--background);
@@ -23,4 +25,74 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-space {
+  font-family: var(--font-space);
+}
+
+
+
+.area-intro {
+  grid-area: intro;
+}
+.area-contact {
+  grid-area: contact;
+}
+.area-blog {
+  grid-area: blog;
+}
+.area-hero {
+  grid-area: hero;
+}
+.area-portfolio {
+  grid-area: portfolio;
+}
+.area-about {
+  grid-area: about;
+}
+.area-projects {
+  grid-area: projects;
+}
+
+
+/* card section add */
+.project-card {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.project-card-image-wrapper {
+  position: relative;
+  height: 16rem;
+  overflow: visible !important;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+.project-card-image {
+  border-radius: 1rem;
+  transition: transform 0.4s ease-out;
+  object-fit: contain !important;
+  background: transparent;
+}
+
+.project-card-image-wrapper:hover {
+  z-index: 100 !important;
+  overflow: visible !important;
+}
+
+.project-card-image-wrapper:hover .project-card-image {
+  transform: scale(1.8);
+  z-index: 100 !important;
+  overflow: visible !important;
+}
+
+.project-card:hover {
+  box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+  z-index: 50;
 }
