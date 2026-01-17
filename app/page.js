@@ -55,9 +55,16 @@ export default function Home() {
           <div className={`${space.className} space-y-6 text-2xl font-extrabold text-gray-500`}>
             <div className="flex items-center gap-4">
               <MdEmail className="text-2xl text-orange-600" />
-              <a href="mailto:soyun0661@gmail.com" className="hover:underline text-xl" >
-                soyun0661@gmail.com
-              </a>
+                <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=soyun0661@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Open in Gmail"
+              className="hover:underline text-xl"
+            >
+              soyun0661@gmail.com
+            </a>
+
             </div>
 
             <div className="flex items-center gap-4">
@@ -74,11 +81,11 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <FaGithub className="text-2xl text-orange-600" />
               <a
-                href="https://github.com/your-id"
+                href="https://github.com/canihave1234"
                 target="_blank"
                 className="hover:underline  text-xl"
               >
-                github.com/your-id
+                github.com/soyun
               </a>
             </div>
           </div>
@@ -111,7 +118,7 @@ export default function Home() {
           />
 
           <p className={`${space.className} text-md font-extrabold text-gray-600`}>
-            I enjoy building projects that solve real problems in my everyday life.
+            I enjoy building projects that solve <br/> real problems in my everyday life.
           </p>
          
         </div>
@@ -124,7 +131,7 @@ export default function Home() {
     >
       {/* 타이틀은 그대로 */}
       <SectionTitle
-        number="03"
+       
         title="ABOUT ME"
         numberClass="text-xl"
         titleClass="text-xl"
@@ -160,7 +167,7 @@ export default function Home() {
         <p className={`${space.className} text-m text-gray-400`}>
           Seneca Polytechnic
           <br />
-          Ontario, Canada
+          Toronto, ON
         </p>
       </div>
 
@@ -218,7 +225,7 @@ export default function Home() {
   id="projects"
   className="min-h-screen bg-gray-100 py-20 px-20 flex flex-col justify-center"
 >
-<SectionTitle number="04" title="PROJECTS" numberClass="text-xl" titleClass="text-xl" />
+<SectionTitle  title="PROJECTS" numberClass="text-xl" titleClass="text-xl" />
 <div className={`${space.className} mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20`}>
 
     <ProjectCard
@@ -246,9 +253,8 @@ export default function Home() {
       image="/projects/my.jpg"
       stack="Next.js · Tailwind CSS · Vercel · React"
      description="A personal portfolio website built to showcase projects and practice modern frontend development."
-
-      liveLink="https://your-portfolio-url.com"
-      githubLink="https://github.com/your-id/portfolio"
+      liveLink="https://soyunsmkim.vercel.app/"
+      githubLink="https://github.com/canihave1234/syWebPage"
     />
 
 

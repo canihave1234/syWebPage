@@ -12,11 +12,14 @@ export default function Footer() {
 
         <div className="flex gap-6 text-sm">
           <a
-            href="mailto:soyun0661@gmail.com"
-            className="hover:text-white transition"
-          >
-            Email
-          </a>
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=soyun0661@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Open in Gmail"
+              className="hover:text-white transition"
+            >
+              Email
+            </a>
           <a
             href="https://www.linkedin.com/in/soyunsokim"
             target="_blank"
@@ -25,7 +28,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href="https://github.com/your-id"
+            href="https://github.com/canihave1234"
             target="_blank"
             className="hover:text-white transition"
           >
