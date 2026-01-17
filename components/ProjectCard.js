@@ -28,7 +28,7 @@ export default function ProjectCard({
         <p className="text-sm text-orange-600 font-semibold">{stack}</p>
         <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
 
-        <div className="pt-4 flex gap-4">
+        <div className="pt-4 flex flex-wrap gap-3 relative z-20">
           {liveLink && (
             <a href={liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-semibold hover:bg-gray-700 transition">
               Live Demo <FaExternalLinkAlt />
