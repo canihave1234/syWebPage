@@ -98,6 +98,7 @@ export default function Home() {
         <div
           onClick={() => scrollTo("about")}
           className="bg-orange-200 p-10 flex flex-col justify-between cursor-pointer hover:brightness-95"
+           
         >
           <SectionTitle number="03" title="ABOUT ME" titleClass="text-3xl" />
         </div>
@@ -120,8 +121,9 @@ export default function Home() {
       {/* ================= ABOUT ================= */}
       <section
         id="about"
-        className="min-h-screen bg-green-200 px-10 py-24 flex flex-col items-center"
+        className="min-h-screen bg-green-200 px-10 py-24 lg:px-20 flex flex-col"
       >
+        
         <SectionTitle title="ABOUT ME" titleClass="text-2xl" />
 
         <h1
@@ -178,7 +180,7 @@ export default function Home() {
   id="projects"
   className="min-h-screen bg-gray-100 py-20 px-10 lg:px-20"
 >
-  <SectionTitle title="PROJECTS" titleClass="text-3xl" />
+  <SectionTitle title="PROJECTS" titleClass="text-2xl" />
 
   <div className={`${space.className} mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20`}>
     <ProjectCard
