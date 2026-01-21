@@ -6,7 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 import { MdEmail } from "react-icons/md";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaDownload } from "react-icons/fa";
 import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 import { space } from "../app/layout";
 
@@ -130,49 +130,86 @@ export default function Home() {
           className={`${space.className} mt-16 text-5xl font-extrabold text-gray-700 text-center`}
         >
           Hi, I’m Soyun Kim.
-        </h1>
+        </h1> 
+<div
+  className="
+    mt-16
+    w-full
+    max-w-7xl
+    mx-auto
+    grid
+    grid-cols-1
+    md:grid-cols-[1.2fr_1.8fr_1.2fr]
+    gap-20
+    items-start
+  "
+>
+  {/* LEFT */}
+  <div className="flex flex-col items-center text-center gap-10">
+    <div>
+      <FaGraduationCap className="mx-auto text-orange-500 text-4xl" />
+      <p className={`${space.className} mt-3 text-lg text-gray-600`}>
+        Computer Programming & Analysis
+        <br />
+        <span className="font-semibold">Advanced Diploma</span>
+      </p>
+      <p className={`${space.className} text-sm text-gray-500`}>
+        Seneca Polytechnic · Toronto
+      </p>
+    </div>
 
-        <div className="mt-16 w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-16">
-          {/* LEFT */}
-          <div className="flex flex-col items-center text-center gap-10">
-            <div>
-              <FaGraduationCap className="mx-auto text-orange-500 text-4xl" />
-              <p className={`${space.className} mt-3 text-lg text-gray-600`}>
-                Computer Programming & Analysis
-                <br />
-                <span className="font-semibold text-gray-600">Advanced Diploma</span>
-              </p>
-              <p className={`${space.className} text-sm text-gray-500`}>
-                Seneca Polytechnic · Toronto
-              </p>
-            </div>
+    <div>
+      <FaBriefcase className="mx-auto text-orange-500 text-3xl" />
+      <p className={`${space.className} mt-3 text-lg font-semibold text-gray-600`}>
+        Software Developer
+      </p>
+      <p className={`${space.className} text-sm text-gray-500`}>
+        Banking systems · 1.5+ years
+      </p>
+    </div>
+  </div>
 
-            <div>
-              <FaBriefcase className="mx-auto text-orange-500 text-3xl" />
-              <p className={`${space.className} mt-3 text-lg font-semibold text-gray-600`}>
-                Software Developer
-              </p>
-              <p className={`${space.className} text-sm text-gray-500`}>
-                Banking systems · 1.5+ years
-              </p>
-            </div>
-          </div>
+  {/* MIDDLE */}
+  <div className="flex flex-col gap-6 text-gray-700">
+    <p className={`${space.className} text-lg`}>
+      I’m a developer who enjoys building things I actually use.
+    </p>
+    <p className={`${space.className} text-lg`}>
+      I turn everyday problems into software from <br/> small utilities that
+      support my daily work to banking-related tools.
+    </p>
+    <p className={`${space.className} text-lg`}>
+      I’m currently looking for a co-op opportunity to learn, contribute,
+      and grow with a real team.
+    </p>
+  </div>
 
-          {/* RIGHT */}
-          <div className="flex flex-col gap-4 text-gray-700">
-            <p className={`${space.className} text-lg`}>
-              I’m a developer who enjoys building things I actually use.
-            </p>
-            <p className={`${space.className} text-lg`}>
-              I turn everyday problems into software — from small utilities that
-              support my daily work to banking-related tools.
-            </p>
-            <p className={`${space.className} text-lg`}>
-              I’m currently looking for a co-op opportunity to learn, contribute,
-              and grow with a real team.
-            </p>
-          </div>
-        </div>
+  {/* RIGHT – ACTIONS */}
+  <div className="flex flex-col gap-6 mt-16">
+    
+    <a
+      href="/sy_kim_resume.pdf"
+      download
+      className="
+      flex items-center gap-3
+      px-6 py-4
+      border border-gray-300
+      rounded-lg
+      font-semibold
+      text-gray-700
+      hover:bg-white/60
+      transition
+      "
+    >
+      <FaDownload className="text-orange-500" />
+    Download Resume
+  </a>
+
+  <p className={`${space.className} text-center text-sm text-gray-600`}>
+    I'd love for you to take a look! 👀
+  </p>
+</div>
+</div>
       </section>
 
       {/* ================= PROJECTS ================= */}
