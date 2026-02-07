@@ -46,7 +46,7 @@ public/
 │
 README.md
 
-Credits
+## Credits
 
 Designed and built by Soyun Kim using Next.js and Tailwind CSS.
 
