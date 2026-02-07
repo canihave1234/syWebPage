@@ -1,13 +1,13 @@
-# 🌱 Soyun Kim – Portfolio Website
+# 🌱Soyun Kim – Portfolio Website
 
 Personal portfolio website built with **Next.js** and **Tailwind CSS** to showcase my projects, experience, and background as a software developer.
 
-🔗 **Live Site:** https://soyunsmkim.vercel.app  
-📂 **GitHub Repository:** https://github.com/canihave1234/syWebPage
+**Live Site:** https://soyunsmkim.vercel.app  
+**GitHub Repository:** https://github.com/canihave1234/syWebPage
 
 ---
 
-## ✨ Features
+##  Features
 
 - Responsive hero grid layout (desktop & mobile)
 - Project cards with Live Demo & GitHub links
@@ -18,7 +18,7 @@ Personal portfolio website built with **Next.js** and **Tailwind CSS** to showca
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js (App Router)
 - **Styling:** Tailwind CSS
@@ -27,25 +27,26 @@ Personal portfolio website built with **Next.js** and **Tailwind CSS** to showca
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-├── app/
-│ ├── page.js # Main page
-│ ├── layout.js # Global layout & fonts
+```text
+app/
+├── page.js              
+├── layout.js            
 │
 ├── components/
-│ ├── ProjectCard.js
-│ ├── SectionTitle.js
-│ ├── Footer.js
-│ ├── ScrollToTop.js
+│   ├── ProjectCard.js
+│   ├── SectionTitle.js
+│   ├── Footer.js
+│   └── ScrollToTop.js
 │
-├── public/
-│ ├── projects/ # Project images
-│ ├── resume.pdf
+public/
+├── projects/           
+├── resume.pdf
 │
-└── README.md
+README.md
 
-🙏 Credits
+Credits
 
 Designed and built by Soyun Kim using Next.js and Tailwind CSS.
 
