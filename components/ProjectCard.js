@@ -1,47 +1,27 @@
-"use client";
-
 import Image from "next/image";
-import { space } from "../app/layout";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-export default function ProjectCard({
-  title,
-  image,
-  stack,
-  description,
-  liveLink,
-  githubLink,
-}) {
+export default function ProjectCard({ number, title, image, stack, description, context, highlights = [], notes, demoNote, liveLink, githubLink }) {
   return (
-    <div className="project-card">
-      <div className="project-card-image-wrapper">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="project-card-image"
-        />
-      </div>
-
-      <div className="p-6 space-y-4">
-        <h3 className="text-xl font-extrabold text-gray-900">{title}</h3>
-        <p className="text-sm text-orange-600 font-semibold">{stack}</p>
-        <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
-
-        <div className="pt-4 flex flex-wrap gap-3 relative z-20">
-          {liveLink && (
-            <a href={liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-semibold hover:bg-gray-700 transition">
-              Live Demo <FaExternalLinkAlt />
-            </a>
-          )}
-
-          {githubLink && (
-            <a href={githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md border border-gray-300 text-gray-800 text-sm font-semibold hover:bg-gray-100 transition">
-              GitHub <FaGithub />
-            </a>
-          )}
+    <article className="project-card">
+      <a className="project-image-link" href={image} target="_blank" rel="noopener noreferrer" aria-label={`Open ${title} preview image`}>
+        <Image src={image} alt={`${title} project preview`} fill sizes="(min-width: 1200px) 550px, (min-width: 760px) 45vw, 90vw" className="project-image" />
+        <span className="image-label">View image <FaExternalLinkAlt aria-hidden="true" /></span>
+      </a>
+      <div className="project-body">
+        <p className="eyebrow">Project {number}</p>
+        <h3>{title}</h3>
+        <p className="project-stack">{stack}</p>
+        <p className="project-description">{description}</p>
+        <p className="project-context">{context}</p>
+        <ul className="project-highlights">{highlights.map((item) => <li key={item}>{item}</li>)}</ul>
+        {notes && <details className="project-details"><summary>Engineering notes</summary><p>{notes}</p></details>}
+        <div className="project-actions">
+          {liveLink && <a className="button button-dark" href={liveLink} target="_blank" rel="noopener noreferrer" aria-label={`Live demo: ${title}`}>Live demo <FaExternalLinkAlt aria-hidden="true" /></a>}
+          {githubLink && <a className="button button-outline" href={githubLink} target="_blank" rel="noopener noreferrer" aria-label={`GitHub source: ${title}`}>GitHub <FaGithub aria-hidden="true" /></a>}
         </div>
+        {demoNote && <p className="demo-note">{demoNote}</p>}
       </div>
-    </div>
+    </article>
   );
 }
