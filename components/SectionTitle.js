@@ -1,46 +1,11 @@
-import { syne, space } from "../app/layout";
+import { syne, space } from "../app/fonts";
 
-export default function SectionTitle({
-  number,
-  title,
-  className = "",
-  numberClass = "",
-  titleClass = "",
-}) {
+export default function SectionTitle({ number, title, className = "", numberClass = "", titleClass = "" }) {
   return (
     <div className={`flex flex-col gap-3 ${className}`}>
-      {/* NUMBER */}
-      <span
-        className={`
-          ${syne.className}
-          text-6xl
-          font-extrabold
-          text-orange-600
-          tracking-tight
-          ${numberClass}
-        `}
-      >
-        {number}
-      </span>
-
-      {/* LINE */}
+      {number && <span className={`${syne.className} text-6xl font-extrabold text-orange-600 tracking-tight ${numberClass}`}>{number}</span>}
       <div className="w-12 h-[5px] bg-orange-600" />
-
-      {/* TITLE */}
-    {title && (
-      <span
-        className={`
-          ${space.className}
-          uppercase
-          tracking-widest
-          font-extrabold
-          text-orange-600
-          ${titleClass || "text-sm"}
-        `}
-      >
-        {title}
-      </span>
-    )}
+      {title && <span className={`${space.className} uppercase tracking-widest font-extrabold text-orange-600 ${titleClass || "text-sm"}`}>{title}</span>}
     </div>
   );
 }
