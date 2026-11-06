@@ -97,7 +97,7 @@ h2 { font-family: var(--font-syne), sans-serif; font-size: clamp(32px, 3.2vw, 44
 .background-divider { height: 1px; background: var(--line); margin: 24px 0; }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .skill-tags span { font-size: 12px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 5px; background: #f6f8ef; }
-.background-card > .credential { padding-top: 16px; font-size: 11px; }
+.skill-tags .credential-tag { background: var(--lime); border-color: #c4d597; }
 .contact-section { background: var(--orange); padding: 48px 0; }
 .contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
 .contact-inner h2 { font-size: clamp(28px, 3vw, 38px); }
